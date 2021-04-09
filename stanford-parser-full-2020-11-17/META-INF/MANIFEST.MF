@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Implementation-Version: 4.2.0
+Built-Date: 2020-11-17
+Created-By: Stanford JavaNLP (jebolton)
+Main-class: edu.stanford.nlp.parser.ui.Parser
+

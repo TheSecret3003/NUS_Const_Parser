@@ -1,0 +1,23 @@
+https://github.com/yohanesgultom/nlp-experiments
+http://www.florianboudin.org/wiki/doku.php?id=nlp_tools_related&DokuWiki=9d6b70b2ee818e600edc0359e3d7d1e8
+https://stackoverflow.com/questions/27086260/how-can-i-create-my-own-model-in-stanford-pos-tagger
+
+
+
+
+
+langkah untuk training model :
+1. extract (pada folder stanford parser full) stanford-parser.jar
+2. copy file treebank indonesia, contoh : pada folder training_data, file nya (treebank.bracket)
+3. paste pada folder path edu\stanford\nlp\parser\shiftreduce\treebank.bracket
+4. lalu jalankan perintah untuk training java -mx10g edu.stanford.nlp.parser.shiftreduce.ShiftReduceParser -trainTreebank edu\stanford\nlp\parser\shiftreduce\treebank.bracket -devTreebank edu\stanford\nlp\parser\shiftreduce\treebank.bracket -serializedPath indonesia_model.ser.gz
+5. Lalu akan didapatkan model bernama indonesia_model.ser.gz
+6. untuk mencoba dengan kalimat buka file ShiftReduceDemo.java
+
+Untuk mendapatkan model yang lebih akurat, lebih baik tarining pos tagger nya juga, berikut langkahnya :
+1. siapkan data training pos tag indonesia dengan file text, contoh bisa dilihat di folder training_data 3 (Pos_Tag_Indonesia.txt)
+2. siapkan juga properti training pos tag nya dalam format .PROPS (contoh : pada training_data file nya Pos_Tag_Indonesia.props
+3. Lalu jalankan perintah java -mx1g edu.stanford.nlp.tagger.maxent.MaxentTagger -props edu\stanford\nlp\tagger\maxent\Pos_Tag_Indonesia.props
+4. Lalu dihasilkan model pos tagger bahasa indonesia (pda contoh ini dengan nama : ind_pos_tag (ini sesuai nama di file properti Pos_Tag_Indonesia.props)
+5. coba dengan kalimat dengan file ShiftReduceDemo.java
+ 

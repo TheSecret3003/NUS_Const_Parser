@@ -1,0 +1,8 @@
+model = ind_pos_tag
+arch = generic,suffix(4),prefix(4),unicodeshapes(-1,1),unicodeshapeconjunction(-1,1),words(-2,-2),words(2,2)
+trainFile = Pos_Tag_Indonesia.txt
+tagSeparator = _
+encoding = utf-8
+iterations = 100
+openClassTags = NN NP VB PR NNP JJ CC SC
+tokenize = false

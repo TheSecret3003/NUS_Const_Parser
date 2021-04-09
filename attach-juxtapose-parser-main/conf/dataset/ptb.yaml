@@ -1,0 +1,5 @@
+# @package _global_
+path_train: data/train.clean
+path_val: data/val.clean
+path_test: data/test.clean
+max_sentence_len: 250

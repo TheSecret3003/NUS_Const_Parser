@@ -1,0 +1,59 @@
+[2021-04-05 21:41:33,455][__main__][WARNING] - Using CPU
+[2021-04-05 21:41:33,459][__main__][INFO] - 
+exp_id: EXPID
+random_seed: null
+num_workers: 4
+batch_size: 32
+eval_batch_size: 64
+resume: null
+amp: true
+num_epochs: 60
+learning_rate_warmup_steps: 150
+learning_rate_patience: 5
+learning_rate_cooldown: 0
+max_grad_norm: 10
+skip_training: false
+log_freq: 10
+model_spec:
+- d_model
+- encoder
+- use_words
+- use_tags
+- d_kqv
+- d_ff
+- word_emb_dropout
+- tag_emb_dropout
+- relu_dropout
+- residual_dropout
+- attention_dropout
+- num_attn_layers
+- num_attn_heads
+- decoder
+- num_gcn_layers
+- d_decoder
+- max_sentence_len
+path_train: data/train.clean
+path_val: data/val.clean
+path_test: data/test.clean
+max_sentence_len: 250
+d_model: 2048
+encoder: xlnet-large-cased
+use_tags: false
+use_words: false
+d_kqv: 64
+d_ff: 2048
+word_emb_dropout: 0.2
+tag_emb_dropout: 0
+relu_dropout: 0.2
+residual_dropout: 0
+attention_dropout: 0.2
+num_attn_layers: 3
+num_attn_heads: 8
+decoder: graph
+num_gcn_layers: 2
+learning_rate: 1.0e-05
+weight_decay: 0
+subbatch_max_tokens: 700
+
+[2021-04-05 21:41:33,462][dataloader][INFO] - Loading constituency trees from C:\Users\Eka\Documents\NUS_Research\Constituency-Parser\attach-juxtapose-parser-main\data\train.clean
+[2021-04-05 21:41:44,126][dataloader][INFO] - Loading constituency trees from C:\Users\Eka\Documents\NUS_Research\Constituency-Parser\attach-juxtapose-parser-main\data\val.clean
